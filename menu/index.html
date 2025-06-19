@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu - Raon cafe 라온 카페</title>
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/menu.css">  
+</head>
+<body>
+    <header>
+        <div class="menu-icon" id="menu-icon">☰</div>
+        <div class="logo">
+            <a href="../index.html"><img src="../images/Raon_cafe_logo.svg" alt="Raon cafe" width="150px"></a>
+        </div>
+        <div class="cart"><a href="../order/cart/index.html"><img src="../images/cart.svg" alt="カート" width="40px"></a>
+        </div>
+    </header>
+
+    <main>
+        <div class="menu" id="menu">
+            <div class="close-btn" id="close-btn">×</div>
+            <button class="order-button" onclick="location.href='../order/index.html'">Order</button>
+            <a href="../menu/index.html">Menu</a>
+            <a href="../news/index.html">News</a>
+            <a href="#access">Access</a>
+            <a href="../terms.html">利用規約</a>
+            <a href="../privacy.html">プライバシーポリシー</a>
+            <p><a href="https://www.instagram.com" alt="Instagram"><img src="../images/Instagram_Glyph_Black.svg" alt="Instagram" width="40px"></a></p>
+        </div>
+        
+        <!-- ↓中身を入れ替える↓ -->
+                 <!-- カテゴリナビ -->
+        <nav>
+            <a href="#signature">Signature</a>
+            <a href="#food">Food</a>
+            <a href="#drinks">Drinks</a>
+            <a href="#hotdrinks">Hot Drinks</a>
+            <a href="#colddrinks">Cold Drinks</a>
+            <a href="#desserts">Desserts</a>
+            <a href="#specials">Specials</a>
+        </nav>
+
+        <h2>Signature</h2>
+        <div id="signature" class="category">
+            <div class="menu-item">
+                <img src="../images/cafemenu/samgyopusalsand.jpg" alt="サムギョプサルサンド">
+                <div class="details">
+                    <span>サムギョプサルサンド</span>
+                    <p>￥1,580+tax</p>
+                </div>
+                <button class="order-button" onclick="addToCart('サムギョプサルサンド', 1580, '../images/cafemenu/samgyopusalsand.jpg')">Order</button>
+            </div>
+            <div class="menu-item">
+                <img src="../images/cafemenu/kogumacheesecake.jpg" alt="コグマチーズケーキ">
+                <div class="details">
+                    <span>コグマチーズケーキ</span>
+                    <p>￥780+tax</p>
+                </div>
+                <button class="order-button" onclick="addToCart('コグマチーズケーキ', 780)">Order</button>
+            </div>
+            <div class="menu-item">
+                <img src="../images/cafemenu/subagjuice.jpg" alt="スバクジュース">
+                <div class="details">
+                    <span>スバクジュース</span>
+                    <p>￥580+tax</p>
+                </div>
+                <button class="order-button" onclick="addToCart('スバクジュース', 580, '../images/cafemenu/subagjuice.jpg')">Order</button>
+            </div>
+            <!-- Add more items here -->
+        </div>
+
+    
+        <!-- フード -->
+        <h2>Food</h2>
+        <div id="food" class="category">
+            <div class="menu-item">
+                <img src="../images/cafemenu/cheesehotdog.JPG" alt="チーズハットグ">
+                <div class="details">
+                    <span>チーズハットグ</span>
+                    <p>￥580+tax</p>
+                </div>
+                <button class="order-button" onclick="addToCart('チーズハットグ', 580, '../images/cafemenu/cheesehotdog.JPG')">Order</button>
+            </div>
+            <div class="menu-item">
+                <img src="../images/cafemenu/toppogi.png" alt="トッポッキ">
+                <div class="details">
+                    <span>トッポッキ</span>
+                    <p>￥980+tax</p>
+                </div>
+                <button class="order-button" onclick="addToCart('トッポッキ', 980, '../images/cafemenu/toppogi.png')">Order</button>
+            </div>
+            <div class="menu-item">
+                <img src="../images/cafemenu/yangnyeomchikenburger.png" alt="ヤンニョムチキンバーガー">
+                <div class="details">
+                    <span>ヤンニョムチキンバーガー</span>
+                    <p>￥1,580+tax</p>
+                </div>
+                <button class="order-button" onclick="addToCart('ヤンニョムチキンバーガー', 1580, '../images/cafemenu/yangnyeomchikenburger.png')">Order</button>
+            </div>
+            <div class="menu-item">
+                <img src="../images/cafemenu/gochujangomeletterice.png" alt="コチュジャンオムライス">
+                <div class="details">
+                    <span>コチュジャンオムライス</span>
+                    <p>￥1,380+tax</p>
+                </div>
+                <button class="order-button" onclick="addToCart('コチュジャンオムライス', 1380, '../images/cafemenu/gochujangomeletterice.png')">Order</button>
+            </div>
+            <div class="menu-item">
+                <img src="../images/cafemenu/rosecreamkukus.png" alt="ロゼクリームククス">
+                <div class="details">
+                    <span>ロゼクリームククス</span>
+                    <p>￥1,380+tax</p>
+                </div>
+                <button class="order-button" onclick="addToCart('ロゼクリームククス', 1380, '../images/cafemenu/rosecreamkukus.png')">Order</button>
+            </div>
+            <div class="menu-item">
+                <img src="../images/cafemenu/koreanramen.png" alt="韓国ラーメン">
+                <div class="details">
+                    <span>韓国ラーメン</span>
+                    <p>￥980+tax</p>
+                </div>
+                <button class="order-button" onclick="addToCart('韓国ラーメン', 980, '../images/cafemenu/koreanramen.png')">Order</button>
+            </div>
+            <div class="menu-item">
+                <img src="../images/cafemenu/sogumbread.png" alt="ソグムパン（塩パン）">
+                <div class="details">
+                    <span>ソグムパン（塩パン）</span>
+                    <p>￥380+tax</p>
+                </div>
+                <button class="order-button" onclick="addToCart('ソグムパン（塩パン）', 380, '../images/cafemenu/sogumbread.png')">Order</button>
+            </div>
+            <!-- その他のフードメニューもここに追加 -->
+        </div>
+    
+        <!-- ドリンク -->
+        <h2>Drinks</h2>
+        <div id="drinks" class="category">
+            <div class="menu-item">
+                <img src="../images/cafemenu/ice-americano.jpg" alt="アメリカーノ(ice/hot)">
+                <div class="details">
+                    <span>アメリカーノ(ice/hot)</span>
+                    <p>￥480+tax</p>
+                </div>
+                <button class="order-button" onclick="addToCart('アメリカーノ', 480, '../images/cafemenu/ice-americano.jpg')">Order</button>
+            </div>
+            <div class="menu-item">
+                <img src="../images/cafemenu/dalgona.JPG" alt="ダルゴナコーヒー(ice/hot)">
+                <div class="details">
+                    <span>ダルゴナコーヒー(ice/hot)</span>
+                    <p>￥680+tax</p>
+                </div>
+                <button class="order-button" onclick="addToCart('ダルゴナコーヒー', 680, '../images/cafemenu/dalgona.JPG')">Order</button>
+            </div>
+            <div class="menu-item">
+                <img src="../images/cafemenu/ice_houjicha_latte.JPG" alt="ほうじ茶ラテ(ice/hot)">
+                <div class="details">
+                    <span>ほうじ茶ラテ(ice/hot)</span>
+                    <p>￥580+tax</p>
+                </div>
+                <button class="order-button" onclick="addToCart('ほうじ茶ラテ', 580, '../images/cafemenu/ice_houjicha_latte.JPG')">Order</button>
+            </div>
+            <div class="menu-item">
+                <img src="../images/cafemenu/hot_maccha.JPG" alt="抹茶ラテ(ice/hot)">
+                <div class="details">
+                    <span>抹茶ラテ(ice/hot)</span>
+                    <p>￥580+tax</p>
+                </div>
+                <button class="order-button" onclick="addToCart('抹茶ラテ', 580, '../images/cafemenu/hot_maccha.JPG')">Order</button>
+            </div>
+            <div class="menu-item">
+                <img src="../images/cafemenu/ice_caramel_macchiato.JPG" alt="キャラメルマキアート(ice/hot)">
+                <div class="details">
+                    <span>キャラメルマキアート(ice/hot)</span>
+                    <p>￥680+tax</p>
+                </div>
+                <button class="order-button" onclick="addToCart('キャラメルマキアート', 680, '../images/cafemenu/ice_caramel_macchiato.JPG')">Order</button>
+            </div>
+            <div class="menu-item">
+                <img src="../images/cafemenu/tapioka_ice_coffee.jpg" alt="タピオカコーヒー(ice/hot)">
+                <div class="details">
+                    <span>タピオカコーヒー(ice/hot)</span>
+                    <span>￥680+tax</span>
+                </div>
+                <button class="order-button" onclick="addToCart('タピオカコーヒー', 680, '../images/cafemenu/tapioka_ice_coffee.jpg')">Order</button>
+            </div>
+        </div>
+
+        <h3>Hot Drinks</h3>
+        <div id="hotdrinks" class="category">
+            <div class="menu-item">
+                <img src="../images/cafemenu/yuzu_tea.JPG" alt="ゆず茶">
+                <div class="details">
+                    <span>ゆず茶</span>
+                    <p>￥580+tax</p>
+                </div>
+                <button class="order-button" onclick="addToCart('ゆず茶', 580, '../images/cafemenu/yuzu_tea.JPG')">Order</button>
+            </div>
+            <div class="menu-item">
+                <img src="../images/cafemenu/gingertea.jpg" alt="生姜茶">
+                <div class="details">
+                    <span>生姜茶</span>
+                    <p>￥580+tax</p>
+                </div>
+                <button class="order-button" onclick="addToCart('生姜茶', 580, '../images/cafemenu/gingertea.jpg')">Order</button>
+            </div>
+            <div class="menu-item">
+                <img src="../images/cafemenu/blacksesame.png" alt="黒ごまラテ">
+                <div class="details">
+                    <span>黒ごまラテ</span>
+                    <p>￥580+tax</p>
+                </div>
+                <button class="order-button" onclick="addToCart('黒ごまラテ', 580, '../images/cafemenu/blacksesame.png')">Order</button>
+            </div>
+            <div class="menu-item">
+                <img src="../images/cafemenu/amazake.png" alt="韓国風甘酒">
+                <div class="details">
+                    <span>韓国風甘酒</span>
+                    <p>￥580+tax</p>
+                </div>
+                <button class="order-button" onclick="addToCart('韓国風甘酒', 580, '../images/cafemenu/amazake.png')">Order</button>
+            </div>
+            <div class="menu-item">
+                <img src="../images/cafemenu/hotchoco.png" alt="ホットチョコレート">
+                <div class="details">
+                    <span>ホットチョコレート</span>
+                    <span>￥580+tax</span>
+                </div>
+                <button class="order-button" onclick="addToCart('ホットチョコレート', 580, '../images/cafemenu/hotchoco.png')">Order</button>
+            </div>
+        </div>
+
+        <h3>Cold Drinks</h3>
+        <div id="colddrinks" class="category">
+            <div class="menu-item">
+                <img src="../images/cafemenu/bobbletea.png" alt="ボバティー（韓国風ミルクティー）">
+                <div class="details">
+                    <span>ボバティー（韓国風ミルクティー）</span>
+                    <span>￥780+tax</span>
+                </div>
+                <button class="order-button" onclick="addToCart('ボバティー（韓国風ミルクティー）', 780, '../images/cafemenu/bobbletea.png')">Order</button>
+            </div>
+            <div class="menu-item">
+                <img src="../images/cafemenu/maccoli _frappe.JPG" alt="マッコリフラッペ">
+                <div class="details">
+                    <span>マッコリフラッペ</span>
+                    <span>￥680+tax</span>
+                </div>
+                <button class="order-button" onclick="addToCart('マッコリフラッペ', 680, '../images/cafemenu/maccoli _frappe.JPG')">Order</button>
+            </div>
+            <div class="menu-item">
+                <img src="../images/cafemenu/ice-honey-mint-tea.jpg" alt="ハニーミントティー">
+                <div class="details">
+                    <span>ハニーミントティー</span>
+                    <p>￥480+tax</p>
+                </div>
+                <button class="order-button" onclick="addToCart('ハニーミントティー', 480, '../images/cafemenu/ice-honey-mint-tea.jpg')">Order</button>
+            </div>
+            <div class="menu-item">
+                <img src="../images/cafemenu/smoothy.png" alt="韓国風スムージー">
+                <div class="details">
+                    <span>韓国風スムージー</span>
+                    <span>￥780+tax</span>
+                </div>
+                <button class="order-button" onclick="addToCart('韓国風スムージー', 780, '../images/cafemenu/smoothy.png')">Order</button>
+            </div>
+            <div class="menu-item">
+                <img src="../images/cafemenu/korean_sangria.JPG" alt="韓国式サングリア">
+                <div class="details">
+                    <span>韓国式サングリア</span>
+                    <p>￥680+tax</p>
+                </div>
+                <button class="order-button" onclick="addToCart('韓国式サングリア', 680, '../images/cafemenu/korean_sangria.JPG')">Order</button>
+            </div>
+            <div class="menu-item">
+                <img src="../images/cafemenu/bananauyu.png" alt="バナナウユ">
+                <div class="details">
+                    <span>バナナウユ</span>
+                    <p>￥580+tax</p>
+                </div>
+                <button class="order-button" onclick="addToCart('バナナウユ', 580, '../images/cafemenu/bananauyu.png')">Order</button>
+            </div>
+        </div>
+
+        <!-- デザート -->
+        <h2>Desserts</h2>
+        <div id="desserts" class="category">
+            <div class="menu-item">
+                <img src="../images/cafemenu/dubaichocotart.png" alt="ドバイチョコタルト">
+                <div class="details">
+                    <span>ドバイチョコタルト</span>
+                    <p>￥1,380+tax</p>
+                </div>
+                <button class="order-button" onclick="addToCart('ドバイチョコタルト', 1380, '../images/cafemenu/dubaichocotart.png')">Order</button>
+            </div>
+            <div class="menu-item">
+                <img src="../images/cafemenu/acaigreekyogort.png" alt="アサイーグリークヨーグルト">
+                <div class="details">
+                    <span>アサイーグリークヨーグルト</span>
+                    <p>￥1,380+tax</p>
+                </div>
+                <button class="order-button" onclick="addToCart('アサイーグリークヨーグルト', 1380, '../images/cafemenu/acaigreekyogort.png')">Order</button>
+            </div>
+            <div class="menu-item">
+                <img src="../images/cafemenu/figparfe.png" alt="フィグパフェ">
+                <div class="details">
+                    <span>フィグパフェ</span>
+                    <p>￥1,280+tax</p>
+                </div>
+                <button class="order-button" onclick="addToCart('フィグパフェ', 1280, '../images/cafemenu/figparfe.png')">Order</button>
+            </div>
+            <div class="menu-item">
+                <img src="../images/cafemenu/mochicreap.jpg" alt="餅クレープ">
+                <div class="details">
+                    <span>餅クレープ</span>
+                    <span>￥1,680+tax</span>
+                </div>
+                <button class="order-button" onclick="addToCart('餅クレープ', 1680, '../images/cafemenu/mochicreap.jpg')">Order</button>
+            </div>
+            <div class="menu-item">
+                <img src="../images/cafemenu/mangopinsu.png" alt="マンゴーピンス（かき氷）">
+                <div class="details">
+                    <span>マンゴーピンス（かき氷）</span>
+                    <span>￥1,680+tax</span>
+                </div>
+                <button class="order-button" onclick="addToCart('マンゴーピンス（かき氷）', 1680, '../images/cafemenu/mangopinsu.png')">Order</button>
+            </div>
+        </div>
+
+        <!-- スペシャル -->
+        <h2>Specials</h2>
+        <div id="specials" class="category">
+            <div class="menu-item">
+                <img src="../images/cafemenu/amancyu.png" alt="季節限定フルーツティー">
+                <div class="details">
+                    <span>季節限定フルーツティー</span>
+                    <p>￥880+tax</p>
+                </div>
+                <button class="order-button" onclick="addToCart('季節限定フルーツティー', 880, '../images/cafemenu/amancyu.png')">Order</button>
+            </div>
+            <div class="menu-item">
+                <img src="../images/cafemenu/targiuyu.png" alt="季節限定いちごラテ">
+                <div class="details">
+                    <span>季節限定いちごラテ</span>
+                    <p>￥680+tax</p>
+                </div>
+                <button class="order-button" onclick="addToCart('季節限定いちごラテ', 680, '../images/cafemenu/targiuyu.png')">Order</button>
+            </div>
+            <div class="menu-item">
+                <img src="../images/cafemenu/piknicset.png" alt="ピクニックセット（持ち帰り専用）">
+                <div class="details">
+                    <span>ピクニックセット（持ち帰り専用）</span>
+                    <p>￥2,880+tax</p>
+                </div>
+                <button class="order-button" onclick="addToCart('ピクニックセット（持ち帰り専用）', 2880, '../images/cafemenu/piknicset.png')">Order</button>
+            </div>
+        </div>
+
+            <!-- その他のスペシャルメニューもここに追加 -->
+        </div>
+        
+    </main>
+    <footer class="footer">
+        <p>Follow us on <a href="https://www.instagram.com">Instagram</a></p>
+        <p><a href="../terms.html">利用規約</a> | <a href="../privacy.html">プライバシーポリシー</a></p>
+        <p><small>Copyright &copy;2024 Raon cafe.</small></p>
+    </footer>
+    <script src="../js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,145 @@
+@charset "utf-8";
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #333;
+}
+
+h2,
+h3 {
+    text-align: center;
+    padding-top: 30px;
+}
+
+nav {
+    display: flex;
+    flex-wrap: wrap; /* 幅が狭くなったら折り返す */
+    align-items: center;
+    padding: 5px 10px; /* 左右の隙間を調整 */
+    position: fixed;
+    top: 70px;
+    z-index: 5;
+    width: 100%;
+    box-sizing: border-box; /* パディング込みで幅を計算 */
+    margin-bottom: 50px;
+}
+
+nav a {
+    text-decoration: none;
+    background-color: #f2f9f3;
+    color: #666;
+    border-radius: 5px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    padding: 5px 10px; /* 各リンクの間隔を調整 */
+    margin: 10px; /* 各リンクの間隔を調整 */
+    font-size: 0.8rem;
+    transition: color 0.3s ease;
+    white-space: nowrap; /* テキストを折り返さない */
+}
+
+nav a:hover {
+    color: #333;
+    font-weight: bold;
+}
+
+
+/* MENU ページのレイアウト修正 */
+
+.category {
+    display: flex; /* 横並びにする */
+    flex-wrap: wrap; /* アイテムが折り返すように設定 */
+    justify-content: center; /* コンテンツを中央揃え */
+    gap: 20px; /* 各アイテム間の余白 */
+    padding: 20px;
+    scroll-margin-top: 150px; /* 必要な調整量 */
+}
+
+.category .menu-item {
+    display: flex;
+    flex-direction: column; /* 縦方向に配置 */
+    align-items: center;
+    text-align: center;
+    width: calc(33.333% - 20px); /* 3カラムに調整 */
+    max-width: 300px; /* 最大幅を指定 */
+    background-color: #fff; /* 背景色 */
+    border-radius: 8px; /* 角丸 */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* 影 */
+    padding: 15px;
+
+}
+
+
+
+.category .menu-item img {
+    width: 100%; /* 横幅を親要素に合わせる */
+    height: auto; /* アスペクト比を保持 */
+    object-fit: cover; /* 画像の切り抜き */
+    border-radius: 8px; /* 角丸 */
+    margin-bottom: 15px;
+    transition: transform 0.3s ease; /* ホバー時の拡大 */
+}
+
+.category .menu-item img:hover {
+    transform: scale(1.05); /* ホバー時に拡大 */
+}
+
+.category .menu-item .details {
+    width: 100%; /* コンテナ幅を設定 */
+    text-align: center; /* テキストを中央揃え */
+    margin-bottom: 10px;
+}
+
+.category .menu-item .details span {
+    display: block;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.category .menu-item .details p {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+/* オーダーボタン */
+.category .menu-item .order-button {
+    background-color: #c3f0ca; /* 背景色 */
+    width: 100%; /* ボタン幅を親要素に合わせる */
+    max-width: 250px; /* ボタンの最大幅 */
+    height: 40px; /* 高さ */
+    border-radius: 8px; /* 角丸 */
+    border: none; /* 枠線なし */
+    font-size: 1rem; /* テキストサイズ */
+    font-weight: bold;
+    color: #333; /* テキスト色 */
+    cursor: pointer; /* ポインタ変更 */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* ボタンの影 */
+    transition: background-color 0.3s ease; /* 背景色変更を滑らかに */
+}
+
+.category .menu-item .order-button:hover {
+    background-color: #5fcb72; /* ホバー時の背景色 */
+    color: #fff; /* ホバー時のテキスト色 */
+}
+
+main {
+    margin-bottom: 40px;
+}
+
+/* レスポンシブ対応 */
+@media (max-width: 768px) {
+    .category .menu-item {
+        width: calc(50% - 20px); /* 2カラム表示 */
+    }
+}
+
+@media (max-width: 480px) {
+    .category .menu-item {
+        width: 100%; /* 1カラム表示 */
+        max-width: none; /* 幅制限解除 */
+    }
+}
+

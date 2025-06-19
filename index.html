@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>Raon cafe 라온 카페 - 韓国風カフェ | 渋谷・代々木公園</title>
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/order.css">
+    
+</head>
+<body>
+    <header>
+        <div class="menu-icon" id="menu-icon" aria-label="メニューアイコン">☰</div>
+        <div class="logo">
+            <a href="index.html"><img src="images/Raon_cafe_logo.svg" alt="Raon cafe" width="150px"></a>
+        </div>
+        <div class="cart"><a href="order/cart/index.html"><img src="images/cart.svg" alt="カート" width="40px"></a>
+        </div>
+    </header>
+
+    <main>
+        <div class="menu" id="menu">
+            <div class="close-btn" id="close-btn">×</div>
+            <button class="order-button" onclick="location.href='order/index.html'" aria-label="注文ページへ移動">Order</button>
+            <a href="menu/index.html">Menu</a>
+            <a href="news/index.html">News</a>
+            <a href="#access">Access</a>
+            <a href="terms.html">利用規約</a>
+            <a href="privacy.html">プライバシーポリシー</a>
+            <a href="https://www.instagram.com" title="Instagram" target="_blank" rel="noopener noreferrer"><img src="images/Instagram_Glyph_Black.svg" alt="Instagram" width="40px"></a>
+        </div>
+            
+        <div class="slideshow">
+            <div class="slide">
+                <picture>
+                    <source media="(max-width: 768px)" srcset="images/mainVisual-1_SP.jpg">
+                    <img src="images/mainVisual-1.jpg" alt="shop1">
+                </picture>
+            </div>
+            <div class="slide">
+                <picture>
+                    <source media="(max-width: 768px)" srcset="images/mainVisual-2_SP.jpg">
+                    <img src="images/mainVisual-2.jpg" alt="shop2">
+                </picture>
+            </div>
+            <!-- 重ねるテキスト -->
+            <div class="slideshow-text">
+                <h1 lang="en">Welcome to Raon cafe</h1>
+            </div>
+        </div>
+    </main>
+        <!--<div class="main-visual">
+            <p>Raon(라온)は韓国語で「楽しい」を意味します。<br>
+            私たちのカフェは、楽しいひとときを創り、<br>共有し、大切にする場所です。<br>
+            ぜひ一緒に楽しい時間を過ごしましょう！</p>
+        </div>-->
+
+
+
+        <div class="section" id="menulist">
+            <h2>Signature Menu</h2>
+            <div class="menu-list">
+                <dl>
+                    <dt><img src="images/cafemenu/samgyopusalsand.jpg" alt="サムギョプサルサンド" width="295" height="320"></dt>
+                    <dd>サムギョプサルサンド<br>&yen;1,580 +tax</dd>
+                </dl>
+                <dl>
+                    <dt><img src="images/cafemenu/kogumacheesecake.jpg" alt="コグマチーズケーキ" width="295" height="320"></dt>
+                    <dd>コグマチーズケーキ<br>&yen;780 +tax</dd>
+                </dl>
+                <dl>
+                    <dt><img src="images/cafemenu/subagjuice.jpg" alt="スバクジュース" width="295" height="320"></dt>
+                    <dd>スバクジュース<br>&yen;580 +tax</dd>
+                </dl>
+            </div>
+            
+            <button class="moreButton" onclick="location.href='menu/index.html'">もっと見る</button>
+            
+        </div>
+        <div class="section" id="order">
+            <button class="order-button" onclick="location.href='order/index.html'" aria-label="注文ページへ移動">Order</button>
+            <p>オーダーはこちらから</p>
+        </div>
+
+        <div class="section" id="news">
+            <h2>News</h2>
+            <div class="news-list">
+            <dl>
+                <dt><time datetime="2024-12-19">2024.12.19</time></dt>
+                <dd>年末年始の営業時間と休業日のお知らせ</dd>
+            </dl>
+            <dl>
+                <dt><time datetime="2024-12-01">2024.12.01</time></dt>
+                <dd>クリスマスケーキご予約受付スタート！！</dd>
+            </dl>
+            <dl>
+                <dt><time datetime="2024-11-20">2024.11.20</time></dt>
+                <dd>センイルパーティーイベントのお知らせ</dd>
+            </dl>
+            <dl>
+                <dt><time datetime="2024-11-10">2024.11.10</time></dt>
+                <dd>韓国プリクラが店舗内に設置されました。</dd>
+            </dl>
+            </div>
+            <button class="moreButton" onclick="location.href='news/index.html'">もっと見る</button>
+        </div>
+        <div class="section" id="access">
+            <h2>Access</h2>
+            <p>東京都渋谷区代々木公園前<br>
+            営業時間: 10:00 - 20:00</p>
+        </div>
+    <footer class="footer">
+        <p>Follow us on <a href="https://www.instagram.com">Instagram</a></p>
+        <p><a href="terms.html">利用規約</a> | <a href="privacy.html">プライバシーポリシー</a></p>
+        <p><small>Copyright &copy;2024 Raon cafe.</small></p>
+    </footer>
+    <script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,300 @@
+@charset "utf-8";
+
+:root {
+	--txt-col-wh: #fff;
+	--txt-col-bk1: #333;
+	--txt-col-bk2: #666;
+	--txt-col-pk1:#ffc6c7;
+	--bg-col: #222;
+	--menu-bg-col: rgba(0, 0, 0, 0.9);
+    --transition: 0.3s ease;
+	--pdg-LR: 25px;
+}
+
+/* 全体のリセット */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+
+/* ヘッダー */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #fff;
+    z-index: 10; /* 他の要素より前面に表示 */
+    position: fixed; /* 固定する */
+    top: 0; /* ページ上部に固定 */
+    width: 100%; /* ヘッダーの幅をページ全体に合わせる */
+}
+
+/* メインコンテンツの調整 */
+main {
+    margin-top: 80px; /* 固定されたヘッダーの高さ分だけ余白を追加 */
+}
+
+.menu-icon {
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+    z-index: 15; /* メニューより前に表示 */
+}
+
+.logo {
+    flex-grow: 1; /* ロゴを中央に配置するための調整 */
+    text-align: center;
+}
+
+.logo img {
+    max-height: 100px; /* ロゴの高さを固定 */
+    object-fit: contain; /* 画像が歪まないように調整 */
+}
+
+.cart {
+    margin-right: 35px;
+    font-size: 1.2rem;
+}
+
+.menu {
+    position: fixed;
+    top: 0;
+    left: -300px; /* 初期位置を画面外に設定 */
+    width: 250px;
+    height: 100%;
+    background-color: #f9f9f9;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    transition: left 0.3s ease; /* スムーズなアニメーション */
+    padding: 25px;
+    overflow-y: auto;
+    z-index: 10;
+  }
+  .menu.active {
+    left: 0; /* 表示時は左寄せ */
+  }
+  .menu a {
+    display: block;
+    margin: 20px 0;
+    text-decoration: none;
+    color: #333;
+  }
+  .close-btn {
+    font-size: 24px;
+    cursor: pointer;
+    text-align: left;
+    margin-bottom: 20px;
+    display: block;
+  }
+
+  .menu .order-button {
+    width: 200px; /* ボタン幅を統一 */
+    height: 50px;
+    font-size: 1.2rem;
+    background-color: #c3f0ca;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+}
+
+.menu .order-button:hover {
+    background-color: #5fcb72;
+    color: #fff;
+}
+
+
+/* スライドショー全体のスタイル */
+.slideshow {
+    position: relative;
+    width: 100%;
+    max-width: 920px; /* PC時の最大幅 */
+    height: 525px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+/* 各スライドのスタイル */
+.slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0; /* 初期状態で非表示 */
+    transition: opacity 0.5s ease-in-out; /* フェードアニメーション */
+}
+
+/* 表示中のスライド */
+.slide.active {
+    opacity: 1; /* 表示 */
+}
+
+/* 画像のリセット */
+.slideshow img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* 縦横比を維持 */
+}
+
+/* テキストスタイル */
+.slideshow-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color:  var(--txt-col-wh);
+    font-size: 2rem;
+    font-weight: bold;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7); /* 文字に影を追加 */
+}
+
+h2 {
+	margin-bottom: 20px;
+	font-size: 1.5rem;
+}
+
+.section {
+	padding: 40px 20px;
+	text-align: center;
+}
+
+.menu-list {
+    display: flex; /* 横並び */
+    gap: 20px; /* 各アイテム間の余白 */
+    justify-content: center; /* 水平中央揃え */
+    flex-wrap: wrap; /* レスポンシブ対応で折り返す */
+    margin-bottom: 15px;
+}
+
+.menu-list dl {
+    text-align: center; /* 画像とテキストを中央揃え */
+    width: 200px; /* 各メニューの幅 */
+}
+
+.menu-list img {
+    width: 100%; /* 画像の横幅を要素に合わせる */
+    height: auto; /* アスペクト比を保持 */
+	margin-bottom: 15px;
+}
+
+.moreButton {
+    background-color: #c3f0ca; /* 背景色 */
+    width: 100px; /* 横幅 */
+    height: 30px; /* 高さ */
+    border-radius: 8px; /* 角丸 */
+    border: 1px solid #dcdcdc;
+    font-size: 0.8rem; /* テキストサイズ */
+    cursor: pointer; /* ホバー時のポインタ */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease; /* 背景色の変化を滑らかに */
+	margin-bottom: 15px;
+}
+
+.order-button {
+    background-color: #c3f0ca; /* 背景色 */
+    width: 300px; /* 横幅 */
+    height: 50px; /* 高さ */
+    border-radius: 10px; /* 角丸 */
+    border: 1px solid #dcdcdc;
+    font-size: 1.5rem; /* テキストサイズ */
+    font-weight: bold; /* テキストを太字 */
+    cursor: pointer; /* ホバー時のポインタ */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease; /* 背景色の変化を滑らかに */
+	margin-bottom: 15px;
+}
+
+.moreButton:hover,
+.order-button:hover {
+    background-color: #5fcb72; /* ホバー時の色 */
+    border: 1px solid #e0e0e0;
+	color: #fff;
+}
+
+
+
+/* Newsエリアのスタイル */
+#news {
+    color: var(--txt-col-bk1); /* テキスト色 */
+    padding: 40px 20px; /* 内側余白 */
+}
+
+#news h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: var(--txt-col-bk1);
+}
+
+.news-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* デフォルトは2カラム */
+    gap: 20px; /* 各ブロック間の余白 */
+    margin-bottom: 20px;
+}
+
+.news-list dl {
+    background-color: #F8FFF0;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+.news-list dt {
+    font-weight: bold;
+    font-size: 1.2rem;
+    margin-bottom: 8px;
+    color: var(--txt-col-bk1);
+}
+
+.news-list dd {
+    font-size: 1rem;
+    color: var(--txt-col-bk1);
+}
+
+
+
+
+
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    margin-top: 30px;
+    font-size: 0.8rem;
+    line-height: 1.8rem;
+}
+
+footer a {
+    color: #ffc6c7;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* モバイル用のスタイル */
+@media screen and (max-width: 600px) {
+	header {
+        flex-direction: row;
+    }
+
+    .slideshow {
+        max-width: 600px; /* SP時の最大幅 */
+        height: 525px;
+    }
+
+    .slideshow-text {
+        font-size: 1.8rem; /* SP時に文字を少し小さく */
+    }
+
+    .news-list {
+		grid-template-columns: 1fr; /* SPは1カラム */
+    }
+}
