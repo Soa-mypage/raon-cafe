@@ -109,7 +109,7 @@ main {
     position: relative;
     width: 100%;
     max-width: 920px; /* PC時の最大幅 */
-    height: auto;
+    aspect-ratio: 16 / 9; /* 高さが割合でつくのでスマホでも崩れない */
     margin: 0 auto;
     overflow: hidden;
 }
@@ -143,7 +143,7 @@ main {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    text-align: center;
+    /*text-align: center;*/
     color:  var(--txt-col-wh);
     font-size: 2rem;
     font-weight: bold;
@@ -305,9 +305,6 @@ footer a:hover {
   
     .slideshow-text {
       font-size: 1.2rem;
-      top: auto;
-      bottom: 20px;
-      transform: translate(-50%, 0);
     }
   }
   
