@@ -109,7 +109,7 @@ main {
     position: relative;
     width: 100%;
     max-width: 920px; /* PC時の最大幅 */
-    height: 525px;
+    height: auto;
     margin: 0 auto;
     overflow: hidden;
 }
@@ -281,13 +281,16 @@ footer a:hover {
 
 /* モバイル用のスタイル */
 @media screen and (max-width: 768px) {
-	header {
-        flex-direction: row;
+    .slideshow {
+        max-width: 100% !important; /* SP時の最大幅 */
+        height: auto !important;
     }
 
-    .slideshow {
-        max-width: 600px; /* SP時の最大幅 */
-        height: auto;
+    .slide picture,
+    .slide img {
+        width: 100% !important;
+        height: auto !important;
+        object-fit: contain !important; /* 切れないように */
     }
 
     .slideshow-text {
@@ -298,3 +301,24 @@ footer a:hover {
 		grid-template-columns: 1fr; /* SPは1カラム */
     }
 }
+
+/*
+@media screen and (max-width: 768px) {
+	header {
+        flex-direction: row;
+    }
+
+    .slideshow {
+        max-width: 768px; /* SP時の最大幅 
+        height: auto;
+    }
+
+    .slideshow-text {
+        font-size: 1.8rem; /* SP時に文字を少し小さく 
+    }
+
+    .news-list {
+		grid-template-columns: 1fr; /* SPは1カラム 
+    }
+}
+*/
