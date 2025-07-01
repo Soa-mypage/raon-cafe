@@ -287,7 +287,7 @@ footer a:hover {
 
     .slideshow {
         max-width: 768px; /* SP時の最大幅 */
-        height: auto;
+        height: 525px;
     }
 
     .slideshow-text {
