@@ -280,13 +280,13 @@ footer a:hover {
 }
 
 /* モバイル用のスタイル */
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 768px) {
 	header {
         flex-direction: row;
     }
 
     .slideshow {
-        max-width: 600px; /* SP時の最大幅 */
+        max-width: 768px; /* SP時の最大幅 */
         height: 525px;
     }
 
