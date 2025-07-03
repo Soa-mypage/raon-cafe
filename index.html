@@ -35,14 +35,20 @@
         <div class="slideshow">
             <div class="slide">
                 <picture>
-                    <source media="(max-width: 768px)" srcset="images/mainVisual-1_SP.jpg">
+                    <!--<source media="(max-width: 768px)" srcset="images/mainVisual-1_SP.jpg">
                     <img src="images/mainVisual-1.jpg" alt="shop1">
                 </picture>
             </div>
             <div class="slide">
                 <picture>
                     <source media="(max-width: 768px)" srcset="images/mainVisual-2_SP.jpg">
-                    <img src="images/mainVisual-2.jpg" alt="shop2">
+                    <img src="images/mainVisual-2.jpg" alt="shop2">-->
+                    <!-- SP画像（スマホ） -->
+                    <source media="(max-width: 768px)" srcset="images/mainVisual-1_SP.jpg">
+                    <!-- PC画像 -->
+                    <source media="(min-width: 769px)" srcset="images/mainVisual-1.jpg">
+                    <!-- fallback用（古いブラウザ） -->
+                    <img src="images/mainVisual-1.jpg" alt="shop1">
                 </picture>
             </div>
             <!-- 重ねるテキスト -->
