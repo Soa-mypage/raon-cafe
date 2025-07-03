@@ -122,11 +122,17 @@ main {
     /*height: 100%;*/
     opacity: 0; /* 初期状態で非表示 */
     transition: opacity 0.5s ease-in-out; /* フェードアニメーション */
+    pointer-events: none; /* ←クリックを無効化 */
+    visibility: hidden;   /* ←視覚的にも隠す */
 }
 
 /* 表示中のスライド */
 .slide.active {
     opacity: 1; /* 表示 */
+    pointer-events: auto;
+    visibility: visible;
+    position: relative;
+    z-index: 1;
 }
 
 /*
